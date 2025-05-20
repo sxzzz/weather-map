@@ -1,0 +1,121 @@
+[
+  {
+    "var_id": "11",
+    "id": "1",
+    "name": "AirT_inst",
+    "unit": "Deg C",
+    "long_name": "Air Temp."
+  },
+  {
+    "var_id": "12",
+    "id": "1",
+    "name": "GHI_inst",
+    "unit": "W/m^2",
+    "long_name": "Solar Irrad."
+  },
+  {
+    "var_id": "21",
+    "id": "2",
+    "name": "AirT_inst",
+    "unit": "Deg C",
+    "long_name": "Air Temp."
+  },
+  {
+    "var_id": "22",
+    "id": "2",
+    "name": "GHI_inst",
+    "unit": "W/m^2",
+    "long_name": "Solar Irrad."
+  },
+  {
+    "var_id": "31",
+    "id": "3",
+    "name": "AirT_inst",
+    "unit": "Deg C",
+    "long_name": "Air Temp."
+  },
+  {
+    "var_id": "32",
+    "id": "3",
+    "name": "GHI_inst",
+    "unit": "W/m^2",
+    "long_name": "Solar Irrad."
+  },
+  {
+    "var_id": "41",
+    "id": "4",
+    "name": "GHI_inst",
+    "unit": "W/m^2",
+    "long_name": "Solar Irrad."
+  },
+  {
+    "var_id": "51",
+    "id": "5",
+    "name": "GHI_inst",
+    "unit": "W/m^2",
+    "long_name": "Solar Irrad."
+  },
+  {
+    "var_id": "61",
+    "id": "6",
+    "name": "GHI_inst",
+    "unit": "W/m^2",
+    "long_name": "Solar Irrad."
+  },
+  {
+    "var_id": "71",
+    "id": "7",
+    "name": "WS_avg",
+    "unit": "m/s",
+    "long_name": "Wind Speed Avg."
+  },
+  {
+    "var_id": "72",
+    "id": "7",
+    "name": "WD_avg",
+    "unit": "Deg",
+    "long_name": "Wind Dir. Avg."
+  },
+  {
+    "var_id": "81",
+    "id": "8",
+    "name": "WS_avg",
+    "unit": "m/s",
+    "long_name": "Wind Speed Avg."
+  },
+  {
+    "var_id": "82",
+    "id": "8",
+    "name": "WD_avg",
+    "unit": "Deg",
+    "long_name": "Wind Dir. Avg."
+  },
+  {
+    "var_id": "91",
+    "id": "9",
+    "name": "AirT_inst",
+    "unit": "Deg C",
+    "long_name": "Air Temp."
+  },
+  {
+    "var_id": "92",
+    "id": "9",
+    "name": "GHI_inst",
+    "unit": "W/m^2",
+    "long_name": "Solar Irrad."
+  },
+  {
+    "var_id": "101",
+    "id": "10",
+    "name": "GHI_inst",
+    "unit": "W/m^2",
+    "long_name": "Solar Irrad."
+  },
+  {
+    "var_id": "102",
+    "id": "10",
+    "name": "AirT_inst",
+    "unit": "Deg C",
+    "long_name": "Air Temp."
+  }
+]

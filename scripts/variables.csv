@@ -1,0 +1,18 @@
+var_id,id,name,unit,long_name
+11,1,AirT_inst,Deg C,Air Temp.
+12,1,GHI_inst,W/m^2,Solar Irrad.
+21,2,AirT_inst,Deg C,Air Temp.
+22,2,GHI_inst,W/m^2,Solar Irrad.
+31,3,AirT_inst,Deg C,Air Temp.
+32,3,GHI_inst,W/m^2,Solar Irrad.
+41,4,GHI_inst,W/m^2,Solar Irrad.
+51,5,GHI_inst,W/m^2,Solar Irrad.
+61,6,GHI_inst,W/m^2,Solar Irrad.
+71,7,WS_avg,m/s,Wind Speed Avg.
+72,7,WD_avg,Deg,Wind Dir. Avg.
+81,8,WS_avg,m/s,Wind Speed Avg.
+82,8,WD_avg,Deg,Wind Dir. Avg.
+91,9,AirT_inst,Deg C,Air Temp.
+92,9,GHI_inst,W/m^2,Solar Irrad.
+101,10,GHI_inst,W/m^2,Solar Irrad.
+102,10,AirT_inst,Deg C,Air Temp.

@@ -1,0 +1,62 @@
+[
+  {
+    "GHI_inst": "120.9",
+    "AirT_inst": "21.88",
+    "timestamp": "29/08/2023 2:05:00"
+  },
+  {
+    "GHI_inst": "127.8",
+    "AirT_inst": "21.79",
+    "timestamp": "29/08/2023 2:10:00"
+  },
+  {
+    "GHI_inst": "147",
+    "AirT_inst": "21.29",
+    "timestamp": "29/08/2023 2:15:00"
+  },
+  {
+    "GHI_inst": "129.3",
+    "AirT_inst": "20.81",
+    "timestamp": "29/08/2023 2:20:00"
+  },
+  {
+    "GHI_inst": "110.6",
+    "AirT_inst": "20.7",
+    "timestamp": "29/08/2023 2:25:00"
+  },
+  {
+    "GHI_inst": "113.5",
+    "AirT_inst": "20.46",
+    "timestamp": "29/08/2023 2:30:00"
+  },
+  {
+    "GHI_inst": "108.6",
+    "AirT_inst": "20.25",
+    "timestamp": "29/08/2023 2:35:00"
+  },
+  {
+    "GHI_inst": "114.1",
+    "AirT_inst": "20.02",
+    "timestamp": "29/08/2023 2:40:00"
+  },
+  {
+    "GHI_inst": "116.4",
+    "AirT_inst": "20.1",
+    "timestamp": "29/08/2023 2:45:00"
+  },
+  {
+    "GHI_inst": "106.5",
+    "AirT_inst": "20",
+    "timestamp": "29/08/2023 2:50:00"
+  },
+  {
+    "GHI_inst": "103.4",
+    "AirT_inst": "20.14",
+    "timestamp": "29/08/2023 2:55:00"
+  },
+  {
+    "GHI_inst": "126.6",
+    "AirT_inst": "19.9",
+    "timestamp": "29/08/2023 3:00:00"
+  }
+]

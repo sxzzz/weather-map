@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "ws_name": "Cohuna North",
+    "site": "Cohuna Solar Farm",
+    "portfolio": "Enel Green Power",
+    "state": "VIC",
+    "latitude": "-35.882762",
+    "longitude": "144.217208"
+  },
+  {
+    "id": "2",
+    "ws_name": "Bungala 1 West",
+    "site": "Bungala 1 Solar Farm",
+    "portfolio": "Enel Green Power",
+    "state": "SA",
+    "latitude": "-32.430536",
+    "longitude": "137.846245"
+  },
+  {
+    "id": "3",
+    "ws_name": "Bungala 2 East",
+    "site": "Bungala 2 Solar Farm",
+    "portfolio": "Enel Green Power",
+    "state": "SA",
+    "latitude": "-32.405243",
+    "longitude": "137.833565"
+  },
+  {
+    "id": "4",
+    "ws_name": "Parkes North",
+    "site": "Parkes Solar Farm",
+    "portfolio": "NEOEN",
+    "state": "NSW",
+    "latitude": "-33.104181",
+    "longitude": "148.07779"
+  },
+  {
+    "id": "5",
+    "ws_name": "Parkes South",
+    "site": "Parkes Solar Farm",
+    "portfolio": "NEOEN",
+    "state": "NSW",
+    "latitude": "-33.123945",
+    "longitude": "148.077615"
+  },
+  {
+    "id": "6",
+    "ws_name": "Parkes East",
+    "site": "Parkes Solar Farm",
+    "portfolio": "NEOEN",
+    "state": "NSW",
+    "latitude": "33.110485",
+    "longitude": "148.101728"
+  },
+  {
+    "id": "7",
+    "ws_name": "Coopers Gap Mast",
+    "site": "Coopers Gap Wind Farm",
+    "portfolio": "AGL",
+    "state": "QLD",
+    "latitude": "-26.744933",
+    "longitude": "151.46473"
+  },
+  {
+    "id": "8",
+    "ws_name": "Bulgana Mast",
+    "site": "Bulgana Green Power Hub",
+    "portfolio": "NEOEN",
+    "state": "VIC",
+    "latitude": "-37.062474",
+    "longitude": "142.950079"
+  },
+  {
+    "id": "9",
+    "ws_name": "Childers West",
+    "site": "Childers Solar Farm",
+    "portfolio": "Atmos",
+    "state": "QLD",
+    "latitude": "-25.304253",
+    "longitude": "152.407882"
+  },
+  {
+    "id": "10",
+    "ws_name": "Darlington MS",
+    "site": "Darlington Solar Farm",
+    "portfolio": "Edify",
+    "state": "NSW",
+    "latitude": "-34.647727",
+    "longitude": "146.063079"
+  }
+]

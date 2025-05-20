@@ -1,0 +1,62 @@
+[
+  {
+    "avg_Wm2": "736.3",
+    "avg_airTemp": "19.78",
+    "timestamp": "29/08/2023 2:05:00"
+  },
+  {
+    "avg_Wm2": "736",
+    "avg_airTemp": "19.74",
+    "timestamp": "29/08/2023 2:10:00"
+  },
+  {
+    "avg_Wm2": "734.1",
+    "avg_airTemp": "19.8",
+    "timestamp": "29/08/2023 2:15:00"
+  },
+  {
+    "avg_Wm2": "734",
+    "avg_airTemp": "19.46",
+    "timestamp": "29/08/2023 2:20:00"
+  },
+  {
+    "avg_Wm2": "732.1",
+    "avg_airTemp": "19.6",
+    "timestamp": "29/08/2023 2:25:00"
+  },
+  {
+    "avg_Wm2": "729.5",
+    "avg_airTemp": "19.14",
+    "timestamp": "29/08/2023 2:30:00"
+  },
+  {
+    "avg_Wm2": "727.1",
+    "avg_airTemp": "19.13",
+    "timestamp": "29/08/2023 2:35:00"
+  },
+  {
+    "avg_Wm2": "722.7",
+    "avg_airTemp": "19.41",
+    "timestamp": "29/08/2023 2:40:00"
+  },
+  {
+    "avg_Wm2": "717.7",
+    "avg_airTemp": "19.78",
+    "timestamp": "29/08/2023 2:45:00"
+  },
+  {
+    "avg_Wm2": "713.1",
+    "avg_airTemp": "19.85",
+    "timestamp": "29/08/2023 2:50:00"
+  },
+  {
+    "avg_Wm2": "708.6",
+    "avg_airTemp": "19.87",
+    "timestamp": "29/08/2023 2:55:00"
+  },
+  {
+    "avg_Wm2": "702.4",
+    "avg_airTemp": "19.93",
+    "timestamp": "29/08/2023 3:00:00"
+  }
+]
