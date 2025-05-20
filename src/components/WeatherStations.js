@@ -132,7 +132,7 @@ export default function WeatherStations() {
 
             {/* map section */}
             <div className="map-container" >
-                <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+                <LoadScript googleMapsApiKey="AIzaSyBDuyDxfkI_aGmikAjb01wEm3eNfYIghcs">
                     <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={5}>
                         {filteredStations.map(station => (
                             <Marker
