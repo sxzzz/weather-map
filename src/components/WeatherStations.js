@@ -66,42 +66,25 @@ export default function WeatherStations() {
     // Get the latest measurements for a given station
     const getLatestMeasurements = (stationId) => {
         const data = dataMap[stationId];
-        if (!data) return [];
+        if (!data || data.length === 0) return [];
 
-        const latest = {};
-        // Loop through data to find latest record for each var
-        for (const item of data) {
-            const { var_id, timestamp, value } = item;
-            if (!latest[var_id] || new Date(timestamp) > new Date(latest[var_id].timestamp)) {
-                latest[var_id] = { timestamp, value };
-            }
-        }
-        // Format data into displayable rows
-        return Object.entries(latest).map(([var_id, { timestamp, value }]) => {
+        const latestData = data[data.length - 1];
+        const variableArray = variables.filter(v => v.id === stationId);
 
-            // link stationId with variables
-            const variableArray = variables.filter(v => v.id === stationId);
-            const latest_m_data = data[data.length-1];// Get last data entry
-
-            let rows = [];
-            // format display text
-            variableArray.forEach(v => {
-                rows.push(
-                    <span key={v.id}>
-                        <strong>{v.long_name}:</strong> {latest_m_data[v.name]} ({v.unit})
-                    </span>
-                );
-            })
-
-            const result = {
-                var_id,
-                timestamp,
-                rows: rows
-            };
-            return result;
+        const rows = variableArray.map(v => {
+            return (
+                <div className="row" key={v.id}>
+                    <strong>{v.long_name}:</strong>
+                    <span>{latestData[v.name]} {v.unit}</span>
+                </div>
+            );
         });
-    };
 
+        return [{
+            timestamp: latestData.timestamp,
+            rows: rows
+        }];
+    };
     return (
         <div className="container" >
             {/* sidebar section */}
@@ -161,7 +144,7 @@ export default function WeatherStations() {
                                         <strong>Portfolio:</strong> {selectedStation.portfolio}<br />
                                         <strong>State:</strong> {selectedStation.state}<br />
                                     </p>
-                                    <h2>Latest Measurements:</h2>
+                                    <h2>Latest Measurements</h2>
                                     <ul  >
                                         {getLatestMeasurements(selectedStation.id).map((m,index) => (
                                             <li  key={index}>
