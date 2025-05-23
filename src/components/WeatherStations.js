@@ -29,14 +29,14 @@ export default function WeatherStations() {
         const fetchData = async () => {
             try {
                 const [stationsRes, variablesRes, allDataRes] = await Promise.all([
-                    axios.get('/api/weather_stations.json'),
-                    axios.get('/api/variables.json'),
-                    axios.get('/api/all_data.json'),
+                    axios.get('/api/weather_stations'),
+                    axios.get('/api/variables'),
+                    axios.get('/api/all_data'),
                 ]);
 
                 setStations(stationsRes.data);
                 setVariables(variablesRes.data);
-                setDataMap(allDataRes.data); // object: { 1: [...], 2: [...], ..., }
+                setDataMap(allDataRes.data);
 
             } catch (err) {
                 //todo
@@ -46,7 +46,7 @@ export default function WeatherStations() {
         fetchData();
     }, []);
 
-    // Extract and sort unique states for filtering
+    //Extract and sort unique states for filtering
     const allStates = useMemo(() => {
         const stateSet = new Set(stations.map(s => s.state));
         return Array.from(stateSet).sort();
@@ -73,10 +73,10 @@ export default function WeatherStations() {
 
         const rows = variableArray.map(v => {
             return (
-                <div className="row" key={v.id}>
+                <span className="row" key={v.id}>
                     <strong>{v.long_name}:</strong>
                     <span>{latestData[v.name]} {v.unit}</span>
-                </div>
+                </span>
             );
         });
 
@@ -127,7 +127,7 @@ export default function WeatherStations() {
                                 onClick={() => handleMarkerClick(station)}
                             />
                         ))}
-                        {/* === InfoWindow shows when a station marker is selected === */}
+                         {/*=== InfoWindow shows when a station marker is selected === */}
                         {selectedStation && (
                             <InfoWindow
                                 position={{
@@ -145,7 +145,7 @@ export default function WeatherStations() {
                                         <strong>State:</strong> {selectedStation.state}<br />
                                     </p>
                                     <h2>Latest Measurements</h2>
-                                    <ul  >
+                                    <ul>
                                         {getLatestMeasurements(selectedStation.id).map((m,index) => (
                                             <li  key={index}>
                                                 {m.timestamp}<br />
