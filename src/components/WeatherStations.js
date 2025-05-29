@@ -14,6 +14,13 @@ const center = {
     lng: 135.0,
 };
 
+const MeasurementRow = ({ label, value }) => (
+    <span className="measurement-row">
+        <strong className="measurement-label">{label}:</strong>
+        <span className="measurement-value">{value}</span>
+    </span>
+);
+
 export default function WeatherStations() {
 
     const [stations, setStations] = useState([]);
@@ -47,18 +54,21 @@ export default function WeatherStations() {
     }, []);
 
     //Extract and sort unique states for filtering
-    const allStates = useMemo(() => {
-        const stateSet = new Set(stations.map(s => s.state));
-        return Array.from(stateSet).sort();
-    }, [stations]);
+    // const allStates = useMemo(() => {
+    //     const stateSet = new Set(stations.map(s => s.state));
+    //     return Array.from(stateSet).sort();
+    // }, [stations]);
+    const allStates = [...new Set(stations.map(s=>s.state).sort())];
 
     // Filter stations by selected state (or show all if none selected)
-    const filteredStations = useMemo(() => {
-        const result = selectedState
-            ? stations.filter(s => s.state === selectedState)
-            : stations;
-        return result;
-    }, [selectedState, stations]);
+    // const filteredStations = useMemo(() => {
+    //     const result = selectedState
+    //         ? stations.filter(s => s.state === selectedState)
+    //         : stations;
+    //     return result;
+    // }, [selectedState, stations]);
+
+    const filteredStations = selectedState? stations.filter(s => s.state === selectedState) : stations;
 
     const handleMarkerClick = (station) => {
         setSelectedStation(station);
@@ -71,14 +81,13 @@ export default function WeatherStations() {
         const latestData = data[data.length - 1];
         const variableArray = variables.filter(v => v.id === stationId);
 
-        const rows = variableArray.map(v => {
-            return (
-                <span className="row" key={v.id}>
-                    <strong>{v.long_name}:</strong>
-                    <span>{latestData[v.name]} {v.unit}</span>
-                </span>
-            );
-        });
+        const rows = variableArray.map(v => (
+            <MeasurementRow 
+                key={v.id}
+                label={v.long_name}
+                value={`${latestData[v.name]} ${v.unit}`}
+            />
+        ));
 
         return [{
             timestamp: latestData.timestamp,
@@ -116,7 +125,7 @@ export default function WeatherStations() {
             {/* map section */}
             <div className="map-container" >
                 <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-                    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={5}>
+                    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={6}>
                         {filteredStations.map(station => (
                             <Marker
                                 key={station.id}
@@ -138,17 +147,17 @@ export default function WeatherStations() {
                             >
                                 <div className="info-window" >
                                     <h2>{selectedStation.ws_name}</h2>
-                                    <p>
-                                        <strong>ID:</strong> {selectedStation.id}<br />
-                                        <strong>Site:</strong> {selectedStation.site}<br />
-                                        <strong>Portfolio:</strong> {selectedStation.portfolio}<br />
-                                        <strong>State:</strong> {selectedStation.state}<br />
-                                    </p>
+                                    <div className="station-info">
+                                        <MeasurementRow label="ID" value={selectedStation.id} />
+                                        <MeasurementRow label="Site" value={selectedStation.site} />
+                                        <MeasurementRow label="Portfolio" value={selectedStation.portfolio} />
+                                        <MeasurementRow label="State" value={selectedStation.state} />
+                                    </div>
                                     <h2>Latest Measurements</h2>
                                     <ul>
                                         {getLatestMeasurements(selectedStation.id).map((m,index) => (
-                                            <li  key={index}>
-                                                {m.timestamp}<br />
+                                            <li key={index}>
+                                                <span>{m.timestamp}</span>
                                                 {m.rows.map((row, idx) => (
                                                     <p key={idx}>{row}</p>
                                                 ))}
